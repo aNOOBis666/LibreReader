@@ -1,0 +1,18 @@
+apply from: "$rootDir/appConfig.gradle"
+
+dependencies {
+    implementation libraries.ktxCore
+    implementation libraries.ktxFragment
+
+    implementation libraries.appCompat
+    implementation libraries.material
+    implementation libraries.recyclerView
+
+    implementation libraries.splashScreen
+
+    implementation libraries.hilt
+    implementation libraries.androidXLifecycle
+    kapt libraries.hiltCompiler
+    implementation libraries.hiltNavFragment
+    implementation libraries.hiltNavCompose
+}

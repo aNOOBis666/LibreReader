@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.plugin.parcelize'
+    id 'org.jetbrains.kotlin.plugin.serialization'
+    id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+}
+
+apply from: "$rootDir/android.gradle"
+apply from: "$rootDir/resources.gradle"
+apply from: "$rootDir/common.gradle"
+
+android {
+    defaultConfig {
+        applicationId 'com.denis.librereader'
+    }
+    hilt {
+        enableAggregatingTask = true
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+        }
+    }
+}
+
+dependencies {
+    implementation(project(":domain"))
+    implementation(project(":presentation-api"))
+    implementation(project(":repository"))
+    implementation(project(":usecase"))
+    implementation(project(":utils"))
+
+    implementation libraries.viewBinding
+}

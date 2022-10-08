@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_primary">#FFBB86FC</color>
+    <color name="accent_secondary">#FF6200EE</color>
+
+    <color name="background_primary">#FF000000</color>
+    <color name="background_secondary">#FF000000</color>
+
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#FFFFFF</color>
+
+    <color name="warning_color">#FFFF3333</color>
+</resources>
